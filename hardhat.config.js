@@ -35,6 +35,13 @@ module.exports = {
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
+
+    // add goerli
+    goerli: {
+      url:process.env.GOERLI_URL || "https://goerli.infura.io/v3/6c315e68c0ae4344a12be2048f8e85dd",
+      accounts:
+        process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
+    }
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS !== undefined,

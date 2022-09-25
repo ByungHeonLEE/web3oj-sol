@@ -8,7 +8,7 @@ async function calculatorSol() {
     const myPlusCalculator = await MyPlusCalculator.connect(myAccount).deploy(); 
     await myPlusCalculator.deployed();
 
-    const instance = "0x000...000"; // 이곳에 덧셈 문제 인스턴스 컨트랙트 주소를 넣으세요
+    const instance = "0xF22C02fbb95E067667F1B1B5fA2ac08419ce41a9"; // 이곳에 덧셈 문제 인스턴스 컨트랙트 주소를 넣으세요
     const PlusCalculatorProblem = await ethers.getContractFactory("PlusCalculatorProblem");
     const plusCalculatorProblem = PlusCalculatorProblem.attach(instance);
     plusCalculatorProblem.connect(myAccount).setPlusCalculator(myPlusCalculator.address);
